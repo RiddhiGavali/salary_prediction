@@ -19,15 +19,15 @@ st.title("Salary Prediction")
 
 age=st.number_input("Age",18,65)
 gender=st.selectbox("Gender",encoder["Gender"].classes_)
-education_level=st.selecbox("Education level",encoder["Education Level"].classes_)
-job_titl=st.selectbox("Job Title",encoder["JobTitle.classes"].classes_)
+education_level=st.selectbox("Education level",encoder["Education Level"].classes_)
+job_title=st.selectbox("Job Title",encoder["Job Title"].classes_)
 years_of_exp=st.number_input("Years of Experience",0,50)
-df=pd.DataFrameFrame({
+df=pd.DataFrame({
     "Age":[age],
     "Gender":[gender],
     "Education Level":[education_level],
-    "JobTitle":[job_title],
-    "YearsOfExperience":[years_of_exp]
+    "Job Title":[job_title],
+    "Years of Experience":[years_of_exp]
 })
 
 if st.button("Predict Salary"):
